@@ -1,2 +1,3 @@
-# dwemer
-the dwemer site
+# Dwemer
+To install use `npm init`
+to run use `npm run watch`
