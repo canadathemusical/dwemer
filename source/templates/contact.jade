@@ -9,11 +9,29 @@ block content
     }
 
   p.
-    Don't forget to add your email credentials to /lib/mailer.js! You won't be able to send mail without them!
+    Please contact us for inquiries and quotes!
 
-  form(action="/sendMail", method="POST")
-    input(type="email", name="toEmail", placeholder="Email Address", required)
-    input(type="text", name="firstName", placeholder="First Name", required)
-    input(type="text", name="lastName", placeholder="Last Name", required)
+  //- form(action="/contact", method="POST")
+  //-   fieldset
+  //-     input(type="email", name="email", placeholder="Email Address", required)
+  //-     input(type="text", name="name", placeholder="Name", required)
+  //-     textarea(type="text", name="message", placeholder="How can we help you?", rows="3", required="required")
+  //-     br
+  //-     button(type="submit") Submit
 
-    button(type="submit") Submit
+
+  .contactform
+    form(action="/contact", method="POST")
+      fieldset
+        .form-group
+          label Name:
+          input#exampleInputEmail1.form-control(type='text', name="name", class='form-control', placeholder='Enter Your Name', required)
+          label Email address:
+          input#exampleInputEmail1.form-control(type='email', name="email", aria-describedby='emailHelp', placeholder='Enter email')
+          small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+        .form-group
+          label What can we do for you?
+          textarea#exampleTextarea.form-control(type='text', name="message", placeholder="How can we help you?", rows="3", required="required")
+        button.btn.btn-primary(type='submit') Submit
+
+

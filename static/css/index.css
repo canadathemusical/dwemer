@@ -9,7 +9,7 @@ body {
   background-color: rgba(233,217,189,0.161);
 }
 .header {
-  background: url("circuit-circuit-board-resistor-computer-163100.jpeg");
+  background: url("/images/circuit-board-resistor.jpeg");
   background-position: center;
 }
 .header .page-title {
@@ -56,9 +56,17 @@ body {
   color: #444;
   font-size: 12px;
 }
-.footer button[type="submit"] {
+button[type="submit"] {
   border: 0;
-  background: none;
+  background: #ceb48f;
   box-shadow: none;
   border-radius: 0px;
+}
+fieldset {
+  background-color: #ccc;
+  max-width: 500px;
+  padding: 16px;
+}
+.fixit {
+  margin-left: 5px;
 }
