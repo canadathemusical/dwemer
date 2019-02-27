@@ -14,8 +14,8 @@ var credentials = require('./emizzle.js');
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(logger('dev'))
-app.use(express.static(__dirname + '/static'))
+app.use(logger('dev'));
+app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res, next) {
     try {
@@ -24,7 +24,7 @@ app.get('/', function(req, res, next) {
     } catch (e) {
         next(e)
     }
-})
+});
 
 app.get('/about', function(req, res, next) {
     try {
@@ -33,7 +33,7 @@ app.get('/about', function(req, res, next) {
     } catch (e) {
         next(e)
     }
-})
+});
 
 app.get('/contact', function(req, res, next) {
     try {
@@ -42,7 +42,7 @@ app.get('/contact', function(req, res, next) {
     } catch (e) {
         next(e)
     }
-})
+});
 
 // POST route from contact form
 app.post('/contact', function(req, res) {
@@ -86,4 +86,4 @@ app.post('/contact', function(req, res) {
 
 app.listen(process.env.PORT || 3000, function() {
     console.log('Listening on http://localhost:' + (process.env.PORT || 3000));
-})
+});
