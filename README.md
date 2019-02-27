@@ -1,4 +1,6 @@
 # Dwemer
 To install use `npm init`
 
-to run use `npm run watch`
+to run locally use `npm run watch`
+
+in production use `pm2 start server`
