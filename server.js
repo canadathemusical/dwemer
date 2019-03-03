@@ -6,8 +6,8 @@ var express = require('express'),
     contactpage = require('jade').compileFile(__dirname + '/source/templates/contact.jade'),
     contactfail = require('jade').compileFile(__dirname + '/source/templates/contactfail.jade'),
     contactsuccess = require('jade').compileFile(__dirname + '/source/templates/contactsuccess.jade')
-var stylus = require("stylus")
-var path = require("path")
+var stylus = require("stylus");
+var path = require("path");
 var nodemailer = require('nodemailer');
 var credentials = require('./emizzle.js');
 
@@ -19,28 +19,28 @@ app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res, next) {
     try {
-        var html = homepage({ title: 'Home' })
-        res.send(html)
+        var html = homepage({ title: 'Home' });
+        res.send(html);
     } catch (e) {
-        next(e)
+        next(e);
     }
 });
 
 app.get('/about', function(req, res, next) {
     try {
-        var html = aboutpage({ title: 'About' })
-        res.send(html)
+        var html = aboutpage({ title: 'About' });
+        res.send(html);
     } catch (e) {
-        next(e)
+        next(e);
     }
 });
 
 app.get('/contact', function(req, res, next) {
     try {
-        var html = contactpage({ title: 'Contact' })
-        res.send(html)
+        var html = contactpage({ title: 'Contact' });
+        res.send(html);
     } catch (e) {
-        next(e)
+        next(e);
     }
 });
 
@@ -64,21 +64,21 @@ app.post('/contact', function(req, res) {
     };
     smtpTrans.sendMail(mailOpts, function(error, response) {
         if (error) {
-            console.log("Fail! You're a piece of shit...")
-            console.log(error)
+            console.log("Fail! You're a piece of shit...");
+            console.log(error);
             try {
-                var html = contactfail({ title: 'Contact Failure' })
-                res.send(html)
+                var html = contactfail({ title: 'Contact Failure' });
+                res.send(html);
             } catch (e) {
-                next(e)
+                next(e);
             }
         } else {
             console.log("success")
             try {
-                var html = contactsuccess({ title: 'Contact Success' })
-                res.send(html)
+                var html = contactsuccess({ title: 'Contact Success' });
+                res.send(html);
             } catch (e) {
-                next(e)
+                next(e);
             }
         }
     });

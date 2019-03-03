@@ -8,6 +8,9 @@ body {
   font-family: 'Source Code Pro', monospace;
   background-color: rgba(233,217,189,0.161);
 }
+#anathem {
+  margin-left: 16px;
+}
 .header {
   background: url("/images/circuit-board-resistor.jpeg");
   background-position: center;
