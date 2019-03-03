@@ -8,6 +8,14 @@ body {
   font-family: 'Source Code Pro', monospace;
   background-color: rgba(233,217,189,0.161);
 }
+#floated {
+  float: left;
+  margin-right: 20px;
+}
+#floated2 {
+  float: right;
+  margin-left: 20px;
+}
 #anathem {
   margin-left: 16px;
 }
