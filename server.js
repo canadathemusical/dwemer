@@ -2,7 +2,7 @@ var express = require('express'),
     logger = require('morgan'),
     app = express(),
     homepage = require('jade').compileFile(__dirname + '/source/templates/homepage.jade'),
-    aboutpage = require('jade').compileFile(__dirname + '/source/templates/about.jade'),
+    // aboutpage = require('jade').compileFile(__dirname + '/source/templates/about.jade'),
     contactpage = require('jade').compileFile(__dirname + '/source/templates/contact.jade'),
     contactfail = require('jade').compileFile(__dirname + '/source/templates/contactfail.jade'),
     contactsuccess = require('jade').compileFile(__dirname + '/source/templates/contactsuccess.jade')
@@ -26,14 +26,14 @@ app.get('/', function(req, res, next) {
     }
 });
 
-app.get('/about', function(req, res, next) {
-    try {
-        var html = aboutpage({ title: 'About' });
-        res.send(html);
-    } catch (e) {
-        next(e);
-    }
-});
+// app.get('/about', function(req, res, next) {
+//     try {
+//         var html = aboutpage({ title: 'About' });
+//         res.send(html);
+//     } catch (e) {
+//         next(e);
+//     }
+// });
 
 app.get('/contact', function(req, res, next) {
     try {
